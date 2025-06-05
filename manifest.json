@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Instagram Reels Enhancer",
+  "version": "1.0",
+  "description": "Scroll to the next video when a reel ends.",
+  "permissions": ["scripting"],
+  "host_permissions": ["https://www.instagram.com/reels*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.instagram.com/reels*"],
+      "js": ["inject.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
+
